@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stok Barang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Manajemen Stok Barang</h1>
+    
+  <div class="form">
+  <input type="text" id="namaBarang" placeholder="Nama Barang">
+  <input type="number" id="jumlahBarang" placeholder="Jumlah">
+  <input type="text" id="tempatBarang" placeholder="Tempat Barang">
+  <button onclick="tambahBarang()">➕ Tambah</button>
+  <button onclick="keluarkanBarang()">➖ Keluarkan</button>
+  <button onclick="editBarang()">✏️ Edit</button>
+</div>
+
+<h2>Daftar Stok</h2>
+<input type="text" id="searchBox" placeholder="🔍 Cari barang..." onkeyup="searchBarang()">
+
+<table id="stokTable">
+  <thead>
+    <tr>
+      <th>Nama Barang</th>
+      <th>Jumlah</th>
+      <th>Tempat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Data akan muncul di sini -->
+  </tbody>
+</table>
+
+  <script src="script.js"></script>
+</body>
+</html>
