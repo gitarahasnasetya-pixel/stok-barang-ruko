@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stok Barang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Dashboard Stok Barang</h1>
+    <p>Stok Keluar Masuk Barang</p>
+  </header>
+
+  <div class="container">
+    <h2>Tambah / Edit Barang</h2>
+    <form id="formBarang">
+      <input type="text" id="nama" placeholder="Nama Barang" required>
+      <!-- Dropdown kategori -->
+      <select id="kategori" required>
+        <option value="">-- Pilih Kategori --</option>
+        <option value="pasir silika">pasir silika</option>
+        <option value="karbon aktif">karbon aktif</option>
+        <option value="zeolit">zeolit</option>
+        <option value="resin">resin</option>
+        <option value="pasir manganese">pasir manganese</option>
+        <option value="spun 20 inch">spun 20 inch</option>
+        <option value="spun 10 inch">spun 10 inch</option>
+        <option value="sikat galon">sikat galon</option>
+        <option value="tabung frp 1054">tabung frp 1054</option>
+        <option value="tawas">tawas</option>
+        <option value="head valve">head valve</option>
+      </select>
+      <input type="number" id="jumlah" placeholder="Jumlah" required>
+      <!-- Dropdown lokasi -->
+      <select id="lokasi" required>
+        <option value="">-- Pilih Lokasi --</option>
+        <option value="ruko bawah">ruko bawah</option>
+        <option value="ruko atas">ruko atas</option>
+        <option value="Gudang 1">Gudang 1</option>
+        <option value="Gudang 2">Gudang 2</option>
+        <option value="Gudang 3">Gudang 3</option>
+      </select>
+      <button type="submit" class="btn">Simpan Barang</button>
+    </form>
+
+    <h2>Daftar Stok</h2>
+    <input type="text" id="search" placeholder="Cari barang...">
+    <table id="tabelBarang">
+      <thead>
+        <tr>
+          <th>Pilih</th>
+          <th>Nama Barang</th>
+          <th>Kategori</th>
+          <th>Jumlah</th>
+          <th>Lokasi</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="batch-actions">
+      <button class="btn" onclick="batchMasuk()">+Masuk Terpilih</button>
+      <button class="btn" onclick="batchKeluar()">-Keluar Terpilih</button>
+      <button class="btn" onclick="batchHapus()">Hapus Terpilih</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
